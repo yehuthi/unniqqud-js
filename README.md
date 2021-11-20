@@ -10,6 +10,8 @@ npm i unniqqud
 
 ## Usage
 
+See the [API reference](https://yehuthi.github.io/unniqqud-js/).
+
 ### Examples
 
 To just remove all diacritics from strings:
