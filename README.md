@@ -1,4 +1,4 @@
-# unniqqud
+# unniqqud [<img src="https://img.shields.io/npm/v/unniqqud?logo=npm" align="right" />](https://www.npmjs.com/package/unniqqud)
 
 Remove niqqud (Hebrew vowel diacritics) and/or ta'amim (Hebrew cantillation diacritics; singular: ta'am) from text.
 
