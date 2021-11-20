@@ -2,13 +2,11 @@
 
 Remove niqqud (Hebrew vowel diacritics) and/or ta'amim (Hebrew cantillation diacritics; singular: ta'am) from text.
 
-<!--
 ## Installation
 
 ```shell
 npm i unniqqud
 ```
--->
 
 ## Usage
 
