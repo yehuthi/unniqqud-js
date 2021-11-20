@@ -9,7 +9,9 @@
 	],
 	"scripts": {
 		"test": "ts-mocha test/**.ts",
-		"prepare": "tsc"
+		"prepare": "tsc",
+		"doc": "npm run prepare && npx typedoc src",
+		"doc:publish": "npm run doc && npx gh-pages -d docs -b docs -f"
 	},
 	"repository": {
 		"type": "git",
@@ -33,7 +35,9 @@
 	"devDependencies": {
 		"@types/expect": "^24.3.0",
 		"@types/mocha": "^9.0.0",
+		"gh-pages": "^3.2.3",
 		"ts-mocha": "^8.0.0",
+		"typedoc": "^0.22.9",
 		"typescript": "^4.4.4"
 	}
 }

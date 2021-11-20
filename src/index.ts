@@ -1,7 +1,10 @@
-/** The char-codes in this array are in punctuation Unicode sections but aren't really
+/**
+ * The char-codes in this array are in punctuation Unicode sections but aren't really
  * niqqud, so we shouldn't consider them as such when we're strict.
  *
  * They're not mingled with cantillation, however, so no need to check for them there.
+ *
+ * @private
  */
 const passthroughCharCodes: number[] = [
 	0x05be, // Maqaf
@@ -11,7 +14,7 @@ const passthroughCharCodes: number[] = [
 ];
 
 /**
- * @returns true if the given character code is a diacritic character (either niqqud or cantillation).
+ * @returns whether the given character code is a diacritic character (either niqqud or cantillation).
  */
 export function isDiacriticCode(charCode: number): boolean {
 	return (
@@ -22,7 +25,7 @@ export function isDiacriticCode(charCode: number): boolean {
 }
 
 /**
- * @returns true if the given character code is a niqqud (vowel diacritic) character.
+ * @returns whether the given character code is a niqqud (vowel diacritic) character.
  */
 export function isNiqqudCode(charCode: number): boolean {
 	return (
@@ -33,28 +36,28 @@ export function isNiqqudCode(charCode: number): boolean {
 }
 
 /**
- * @returns true if the given character code is a ta'am (cantillation diacritic) character.
+ * @returns whether the given character code is a ta'am (cantillation diacritic) character.
  */
 export function isTaamCode(charCode: number): boolean {
 	return 0x0591 <= charCode && charCode <= 0x05af;
 }
 
 /**
- * @returns true if the given character is a diacritic character (either niqqud or cantillation).
+ * @returns whether the given character is a diacritic character (either niqqud or cantillation).
  */
 export function diacritic(charCode: string): boolean {
 	return isDiacriticCode(charCode.charCodeAt(0));
 }
 
 /**
- * @returns true if the given character is a niqqud (vowel diacritic) character.
+ * @returns whether the given character is a niqqud (vowel diacritic) character.
  */
 export function niqqud(charCode: string): boolean {
 	return isNiqqudCode(charCode.charCodeAt(0));
 }
 
 /**
- * @returns true if the given character is a ta'am (cantillation diacritic) character.
+ * @returns whether the given character is a ta'am (cantillation diacritic) character.
  */
 export function taam(charCode: string): boolean {
 	return isTaamCode(charCode.charCodeAt(0));
