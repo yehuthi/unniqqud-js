@@ -39,7 +39,7 @@ niqqud.taam(qamatz) // = false
 niqqud.diacritic(qamatz) // = true
 ```
 
-ALl three predicates have a `is*Code` variant that checks a character-code number instead of a string. E.g.
+All three predicates have a `is*Code` variant that checks a character-code number instead of a string. E.g.
 ```ts
 import * as unniqqud from "unniqqud";
 unniqqud.isNiqqud(0x05B8 /* i.e. Qamatz */) // = true
